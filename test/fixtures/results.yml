@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  kokuho_res1: 1
+  kokuho_res2: 1
+  kokuho_res3: 1
+  kouki_res1: 1
+  kouki_res2: 1
+  kouki_res3: 1
+
+two:
+  name: MyText
+  kokuho_res1: 1
+  kokuho_res2: 1
+  kokuho_res3: 1
+  kouki_res1: 1
+  kouki_res2: 1
+  kouki_res3: 1

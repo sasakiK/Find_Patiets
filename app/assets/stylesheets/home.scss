@@ -1,0 +1,161 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', 'Noto Sans Japanese', sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align:left;
+}
+
+/* header */
+header {
+  height: 70px;
+  width: 100%;
+  /* background-color: rgba(34, 49, 52, 0.9); */
+  background-color: white;
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+
+/* about title ================================ */
+
+.top-wrapper  h1{
+  font-size:  110px;
+  text-align: center;
+  margin-top:10%;
+}
+
+.letter-color1{
+  color: #27B2FF;
+}
+.letter-color2{
+  color: #4112AA;
+}
+.letter-color3{
+  color: #C40087;
+}
+
+
+/* about seach-form ================================ */
+
+.search-form {
+  width: 80%;
+  margin:auto;
+  display: table;
+}
+
+.form-div{
+  // text-align:center;
+  display: table-cell;
+  vertical-align: upper;
+  text-align: center;
+}
+
+input, button, textarea, select
+input {
+	margin-top: 1em;
+	padding: .5em;
+	border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+input[type="text"],
+textarea {
+  width: 80%;
+  margin : 10px 0 10px 10px;
+  padding: 15px 0 15px 15px;
+  outline: none;
+  border: 1px solid #aaa;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+input[type="text"]:focus,
+textarea:focus {
+  box-shadow: 0 0 7px #3814A0;
+  border: 1px solid #3814A0;
+}
+
+// submit button
+input[type="submit"]{
+  margin : 10px 10px 10px 0px;
+  padding: 15px 10px 15px 15px;
+}
+
+
+/* about ================================ */
+
+.about-main {
+  padding: 180px 8% 0;
+  color:black;
+}
+
+.about-main h1 {
+  font-size: 84px;
+  // font-weight: 500;
+  line-height: 1.4;
+}
+
+.about-main p {
+  font-weight: 200;
+  font-size: 22px;
+}
+
+.about-main a{
+  color: inherit;
+}
+
+.about-img {
+  width: 84%;
+}
+
+
+/* footer signiture */
+footer h1 {
+  color: #b3aeb5;
+  font-size: 9px;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  position: fixed;
+  text-align:center;
+  width:100%;
+  bottom: 0;
+}
+
+
+.signiture {
+  font-size: 11px;
+  margin-top: 13%;
+  text-align: center;
+}
+
+.signiture span{
+  color: #B7B7B7;
+}
+.signiture a{
+  color:  inherit;
+}
