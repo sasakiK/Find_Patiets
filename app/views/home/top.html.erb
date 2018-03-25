@@ -17,7 +17,7 @@
 
   <!-- title name -->
   <div class="top-wrapper">
-    <div class="container">
+    <div class="container-title">
       <h1><span class="letter-color1">F</span>ind
           <span class="letter-color2">P</span>atients<span class="letter-color3">.</span></h1>
     </div>
@@ -31,7 +31,7 @@
       <%= form_tag results_path, :method => 'get', class: "search" do %>
         <p>
           <%= text_field_tag :search, params[:search], placeholder: "Search.." %>
-          <%= submit_tag "Find", :name => nil %>
+          <%= submit_tag " Find ", :name => nil %>
         </p>
       <% end %>
       </div>
