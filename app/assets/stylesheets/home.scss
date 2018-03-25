@@ -1,6 +1,9 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variables";
+
 * {
   box-sizing: border-box;
 }
@@ -52,69 +55,61 @@ header {
 .top-wrapper  h1{
   font-size:  110px;
   text-align: center;
-  margin-top:15%;
+  margin-top:20%;
 }
 
 .letter-color1{
-  color: #27B2FF;
+  color: $blue;
 }
 .letter-color2{
-  color: #4112AA;
+  color: $purpule;
 }
 .letter-color3{
-  color: #C40087;
+  color: $pink;
 }
 
 
 /* about seach-form ================================ */
 
 .search-form {
-  width: 80%;
+  width: 88%;
   margin:auto;
   display: table;
+  box-shadow: 1px 2px 6px rgba(106, 137, 152, 0.3);
 }
 
 .form-div{
-  // text-align:center;
   display: table-cell;
   vertical-align: upper;
   text-align: center;
 }
 
-input, button, textarea, select
+
+// input, button, textarea, select
 input {
 	margin-top: 1em;
 	padding: .5em;
-	border: 1px solid red;
-	// border-style: none;
+	border: 1px solid #ddd;
   border-radius: 2px;
-  font-size: 18px
+  font-size: 19px
 }
-
 input[type="text"],
 textarea {
-  width: 80%;
-  margin : 10px 0 10px 10px;
-  padding: 15px 0 15px 15px;
+  width: 87%;
+  margin : 5px 0 5px 5px;
+  padding: 9px 0 9px 9px;
   outline: none;
-  border: 1px solid #aaa;
-	// border-style: none;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  border-style: none;
+  // border: 1px solid #F1F1F1;
+  // background-color: #F1F1F1;
 }
-input[type="text"]:focus,
-textarea:focus {
-  box-shadow: 0 0 7px #3814A0;
-  border: 1px solid #3814A0;
-}
-
 // submit button
 input[type="submit"]{
-  margin : 10px 10px 10px 0px;
-  padding: 15px 10px 15px 15px;
-  border: 1px solid #C40087;
-  color: white;
-  background-color: #C40087;
+  margin : 5px 5px 5px 0;
+  padding: 9px 9px 9px 9px;
+}
+.search-p{
+  font-size:21px;
 }
 
 
@@ -148,6 +143,7 @@ input[type="submit"]{
 /* footer signiture */
 
 footer {
+  // position: absolute;
   position: fixed;
   bottom: 0;
   width: 100%;
