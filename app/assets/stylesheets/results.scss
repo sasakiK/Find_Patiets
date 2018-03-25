@@ -76,10 +76,33 @@ input[type="submit"]{
 
 
 // 検索キーワード
+.container-count {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align:center;
+  // 検索引っかかったレコード数
+  h4 {
+    padding-top: 110px;
+    margin-bottom: 10px;
+    font-size: 45px;
+    color: #b3aeb5;
+    font-family: 'Futura', 'Noto Sans Japanese', sans-serif;
+  }
+  span.judged {
+    font-size: 80px;
+    color: black;
+    font-family: 'Futura', 'Noto Sans Japanese', sans-serif;
+  }
+}
+
+// 検索キーワード
 .container {
   max-width: 1300px;
   width: 100%;
   padding: 0 15px;
+  padding-bottom: 110px;
   margin: 0 auto;
   text-align:center;
   // 検索引っかかったレコード数
