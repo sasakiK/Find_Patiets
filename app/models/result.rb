@@ -10,4 +10,18 @@ class Result < ActiveRecord::Base
       Result.all #全て表示。
     end
   end
+
+  # csvデータDLのためのメソッドを定義
+  # http://ruby-rails.hatenadiary.com/entry/20141119/1416398472
+
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << column_names
+      all.each do |res_temp|
+        csv << res_temp.attributes.values_at(*column_names)
+      end
+    end
+  end
+
+
 end
