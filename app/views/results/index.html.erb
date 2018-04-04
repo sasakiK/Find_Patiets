@@ -44,6 +44,7 @@
     <div class="top-wrapper">
       <div class="container-count">
         <h4> There are 　<span class="judged"><%= @judge %></span> 　resuts. </h4>
+        <%= button_to_csv %>
       </div>
     </div>
 
@@ -51,7 +52,7 @@
     <% @results.each do |result| %>
 
       <div class="res-name">
-        <h1><span> You mean .. :　 </span>「 <%= result.name %> 」 <span> ?</span> </h1>
+        <h1 id="vh"><span> You mean .. :　 </span>「 <%= result.name %> 」 <span> ?</span> </h1>
       </div>
 
       <!-- 国保 データ表示 -->
@@ -59,7 +60,7 @@
         <div class="container">
           <!-- 国保の結果ボックス -->
           <div class="result-box kokuho-box">
-            <h2 class="insurance-title kokuho">国民健康保険</h2>
+            <h2 class="insurance-title kokuho">K.K.H.</h2>
             <div class="child-box">
               <p>レセプト枚数</p>
               <p>Number of lines.</p>
@@ -71,7 +72,7 @@
               <div class="result-number"> <%= result.kokuho_res2 %> <span>人</span></div>
             </div>
             <div class="child-box">
-              <p>介護保険利用者数</p>
+              <p>LTC利用者数</p>
               <p>LTC user.</p>
               <div class="result-number"> <%= result.kokuho_res3 %> <span>人</span></div>
             </div>
@@ -85,7 +86,7 @@
           </div>
           <!-- 後期高齢の結果ボックス -->
           <div class="result-box kouki-box">
-            <h2 class="insurance-title kouki">後期高齢</h2>
+            <h2 class="insurance-title kouki">K.K.</h2>
             <div class="child-box">
               <p>レセプト枚数</p>
               <p>Number of lines.</p>
@@ -97,7 +98,7 @@
               <div class="result-number"> <%= result.kouki_res2 %> <span>人</span></div>
             </div>
             <div class="child-box">
-              <p>介護保険利用者数</p>
+              <p>LTC利用者数</p>
               <p>LTC user.</p>
               <div class="result-number"> <%= result.kouki_res3 %> <span>人</span></div>
             </div>
