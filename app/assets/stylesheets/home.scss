@@ -36,6 +36,7 @@ header {
   width: 100%;
   /* background-color: rgba(34, 49, 52, 0.9); */
   background-color: white;
+  // background-color: #FAFAFA;
   position :fixed;
   top: 0;
   z-index: 10;
@@ -92,6 +93,9 @@ input {
 	border: 1px solid #ddd;
   border-radius: 2px;
   font-size: 19px
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 input[type="text"],
 textarea {
