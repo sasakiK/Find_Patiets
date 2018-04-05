@@ -100,7 +100,28 @@
   }
 }
 
-/* result box */
+
+/* 検索結果を保存する ================================ */
+
+input#save_button{
+  outline:none;
+  color: grey;
+  // font-weight: bold;
+  margin-top: 0.8em;
+  border-radius: 3px;
+  // background-color: #AAA4AC;
+  border-style: solid; border-width: medium;
+  // box-shadow: 1px 2px #555;
+  &:hover {
+    color: #AAA4AC;
+  }
+  &:active{
+    // box-shadow: none;
+  }
+}
+
+
+/* result box ================================ */
 
 .result-box{
   width: 100%;
@@ -128,7 +149,8 @@
   color:#C40087;
 }
 
-/* 結果表示 */
+
+/* 検索結果表示 ================================ */
 
 .result-number{
   font: bold 60px "Futura";

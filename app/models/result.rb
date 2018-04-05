@@ -16,9 +16,11 @@ class Result < ActiveRecord::Base
 
   def self.to_csv
     CSV.generate do |csv|
-      csv << column_names
+      col_names = ["name", "kokuho_res1", "kokuho_res2", "kokuho_res3", "kouki_res1", "kouki_res2", "kouki_res3"]
+      col_names_label = ["keyword", "国保レセプト枚数", "国保患者数", "国保LTC利用者数", "後期レセプト枚数", "後期患者数", "後期LTC利用者数"]
+      csv << col_names_label
       all.each do |res_temp|
-        csv << res_temp.attributes.values_at(*column_names)
+        csv << res_temp.attributes.values_at(*col_names)
       end
     end
   end
