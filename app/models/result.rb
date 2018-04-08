@@ -1,15 +1,37 @@
+
+# encoding: utf-8
+
 class Result < ActiveRecord::Base
 
   # 検索のためのメソッドを定義
   # https://qiita.com/budougumi0617/items/d98fc15adea4dab438e7
 
+  # def self.search(search) #self.でクラスメソッドとしている
+  #   if search # Controllerから渡されたパラメータが != nilの場合は、titleカラムを部分一致検索
+  #     Result.where(['name LIKE ?', "%#{search}%"])
+  #   else
+  #     Result.all #全て表示。
+  #   end
+  # end
+
   def self.search(search) #self.でクラスメソッドとしている
-    if search # Controllerから渡されたパラメータが!= nilの場合は、titleカラムを部分一致検索
-      Result.where(['name LIKE ?', "%#{search}%"])
+    if search # Controllerから渡されたパラメータが != nilの場合は、titleカラムを部分一致検索
+      # Result.where(['name LIKE ?', "%#{search}%"])
+      patterns = search.split(/[ ,　]/)
+      sql_body = ''
+      patterns.each do | pattern |
+        sql_body += ' and ' unless sql_body.blank?
+        sql_body += " name like '%#{pattern}%' "
+      end
+      sql = "select 'results'.* from 'results' where (#{sql_body})"
+
+      Result.find_by_sql(sql)
+      # Result.where(['name LIKE ?', "%#{search}%"])
     else
       Result.all #全て表示。
     end
   end
+
 
   # csvデータDLのためのメソッドを定義
   # http://ruby-rails.hatenadiary.com/entry/20141119/1416398472
