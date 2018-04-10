@@ -14,38 +14,10 @@
 <body>
 
 
-<header>
-<!-- header search form -->
-<div class="container">
-  <div class="header-left">
-  <a href="/">
-    <h1><span class="letter-color1">F</span>ind
-        <span class="letter-color2">P</span>atients<span class="letter-color3">.</span></h1>
-  </a>
-  </div>
-  <div class="header-right">
-    <div class="search-form-res">
-      <%#　検索フォーム %>
-      <%= form_tag results_path, :method => 'get' do %>
-        <p>
-          <%= text_field_tag :search, params[:search], class: "search-result" %>
-          <%= submit_tag " Find ", :name => nil %>
-        </p>
-      <% end %>
-      <%#　検索フォーム %>
-    </div>
-  </div>
-</div>
-</header>
 
 
-<div class="top-wrapper">
   <div class="container">
     <div class="res-name">
       <h1 id="vh"><span> Let's download　 </span>「 <%= @patients.name %> 」 <span> patients...</span> </h1>
     </div>
   </div>
-</div>
-<!-- <div class="res-name">
-  <h1 id="vh"><span> Let's download　 </span>「 <%= @patients.name %> 」 <span> patients...</span> </h1>
-</div> -->

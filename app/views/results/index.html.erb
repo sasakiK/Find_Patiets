@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Patients.</title>
-    <!-- <link rel="stylesheet" href="css/stylesheet.css"> -->
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
@@ -13,29 +12,6 @@
   </head>
 <body>
 
-  <header>
-  <!-- header search form -->
-  <div class="container">
-    <div class="header-left">
-    <a href="/">
-      <h1><span class="letter-color1">F</span>ind
-          <span class="letter-color2">P</span>atients<span class="letter-color3">.</span></h1>
-    </a>
-    </div>
-    <div class="header-right">
-      <div class="search-form-res">
-        <%#　検索フォーム %>
-        <%= form_tag results_path, :method => 'get' do %>
-          <p>
-            <%= text_field_tag :search, params[:search], class: "search-result" %>
-            <%= submit_tag " Find ", :name => nil %>
-          </p>
-        <% end %>
-        <%#　検索フォーム %>
-      </div>
-    </div>
-  </div>
-  </header>
 
   <!-- 検索キーワードが空であれば -->
   <% if @exist == "none" %>
@@ -88,7 +64,7 @@
 
                 <div class="message-wrapper">
                   <span class="btn message">
-                    <%= link_to("Download csv.", "/results/#{result.id}/download") %>
+                    <%= link_to("Download csv.", "/results/#{result.id}/download",class: "dl-link") %>
                   </span>
                 </div>
               </div>

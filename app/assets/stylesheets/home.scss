@@ -10,8 +10,7 @@
 
 body {
   margin: 0;
-  font-family: 'Lato', 'Noto Sans Japanese', sans-serif;
-
+  font-family: 'Lato', 'Noto Sans Japanese' 'メイリオ', sans-serif;
 }
 
 a {
@@ -23,30 +22,89 @@ a {
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1500px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
   text-align:left;
 }
 
-/* header */
+/* about header ================================ */
 header {
-  height: 85px;
+  height: 65px;
   width: 100%;
-  /* background-color: rgba(34, 49, 52, 0.9); */
-  background-color: white;
-  // background-color: #FAFAFA;
+  background-color: grey;
+  // background-color: #bdc3c7;
   position :fixed;
   top: 0;
   z-index: 10;
 }
 
+.logo {
+  margin-top: 6px;
+}
+
+.header-left {
+  float: left;
+  width: 50%;
+  color: white;
+  h1{
+    line-height: 65px;
+    padding: 0 25px;
+  }
+  a {
+    font-size: 21px;
+    font-weight: bold;
+    color: inherit;
+    line-height: 65px;
+    padding: 0 25px;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+  }
+  a.header-link {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+}
+
+.header-right {
+  line-height: 65px;
+  float: right;
+  width: 50%;
+}
+
+.search-form-res {
+  margin-top: 4.5px;
+  width: 100%;
+  display: inline-block;
+  form{
+    width: 100%;
+    display: flex;
+    input{
+      color:grey;
+      font-size: 21px;
+      font-weight: bold;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    input.search-result{
+      color:white;
+    }
+  }
+  .search-result{
+    background-color: #D5D5D5;
+  }
+}
+
+
 
 /* about title ================================ */
 
 .container-title{
-  max-width: 1300px;
+  max-width: 1500px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -70,7 +128,7 @@ header {
 }
 
 
-/* about seach-form ================================ */
+/* about seach-form(TOPPAGE) ================================ */
 
 .search-form {
   width: 88%;

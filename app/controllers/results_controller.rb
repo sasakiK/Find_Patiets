@@ -15,7 +15,6 @@ class ResultsController < ApplicationController
     else # 検索キーワードが空であれば
       @exist = "none" #@judgeに1をわたす
     end
-
   end
 
 
