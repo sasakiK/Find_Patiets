@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :results, only: [:index]
 
-  get "results/:id/download" => "results#download"
+  get "results/:id/download" => "downloads#download" #要変更
 
   get "/" => "home#top"
   get "about" => "home#about"
