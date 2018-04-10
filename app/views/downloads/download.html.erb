@@ -21,3 +21,17 @@
       <h1 id="vh"><span> Let's download　 </span>「 <%= @patients.name %> 」 <span> patients...</span> </h1>
     </div>
   </div>
+
+  <div class="container-dl">
+    <h1> There are <span><%= @patients_count %></span> patients. </h1>
+  </div>
+
+  <% @dl_patients.each do |patients| %>
+  <div class="container">
+    <div class="res-namedl">
+      <h1 id="vh"><span> 診療報酬コード = <%= patients.tekiyocode %>  </h1>
+      <h1 id="vh"><span> 診療年月 = <%= patients.sinryonengetu %>  </h1>
+      <h1 id="vh"><span> 診療行為名 = <%= patients.kbnno %>  </h1>
+    </div>
+  </div>
+  <% end %>
